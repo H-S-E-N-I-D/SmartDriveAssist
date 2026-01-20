@@ -1,0 +1,146 @@
+# ──────────────────────────────────────────────
+# Android / Gradle build outputs
+# ──────────────────────────────────────────────
+*.class
+*.log
+*.apk
+*.ap_
+*.aab
+*.dex
+*.aar
+
+/build/
+/app/build/
+**/build/
+
+bin/
+gen/
+out/
+release/
+
+# ──────────────────────────────────────────────
+# Gradle
+# ──────────────────────────────────────────────
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Gradle cache & daemon
+.gradle-home/
+.gradletasknamecache
+
+# Local gradle properties (may contain SDK paths)
+local.properties
+
+# ──────────────────────────────────────────────
+# Android Studio / IntelliJ IDEA
+# ──────────────────────────────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Module files
+.idea/modules.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/caches
+.idea/navEditor.xml
+.idea/codeStyles/
+
+# Android Studio captures folder
+captures/
+
+# ──────────────────────────────────────────────
+# Kotlin / JVM
+# ──────────────────────────────────────────────
+*.kotlin_module
+*.kotlin_builtins
+
+# Kotlin incremental compilation
+**/.kotlin/
+**/kotlin-build-statistics.bin
+
+# ──────────────────────────────────────────────
+# Signing / secrets — never commit these
+# ──────────────────────────────────────────────
+*.jks
+*.keystore
+*.pepk
+keystore.properties
+signing.properties
+google-services.json
+secrets.properties
+local.defaults.properties
+
+# ──────────────────────────────────────────────
+# ProGuard
+# ──────────────────────────────────────────────
+proguard/
+**/proguard-generated-rules.pro
+
+# ──────────────────────────────────────────────
+# OS generated files
+# ──────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ──────────────────────────────────────────────
+# Test & coverage reports
+# ──────────────────────────────────────────────
+test-results/
+reports/
+coverage/
+jacoco/
+*.exec
+*.html
+*.xml
+
+# ──────────────────────────────────────────────
+# Navigation Safe Args (generated)
+# ──────────────────────────────────────────────
+**/generated/
+
+# ──────────────────────────────────────────────
+# Compose compiler metrics / reports
+# ──────────────────────────────────────────────
+compose_compiler/
+compose-metrics/
+compose-reports/
+
+# ──────────────────────────────────────────────
+# Version control helpers
+# ──────────────────────────────────────────────
+*.orig
+*.rej
+*.bak
+*.patch
+
+# ──────────────────────────────────────────────
+# Environment / CI secrets
+# ──────────────────────────────────────────────
+.env
+.env.*
+!.env.example
