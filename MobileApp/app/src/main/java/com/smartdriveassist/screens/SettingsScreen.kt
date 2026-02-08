@@ -18,9 +18,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.smartdriveassist.navigation.Screen
 import com.smartdriveassist.ui.components.SdaBottomNav
 import com.smartdriveassist.ui.theme.*
@@ -262,4 +264,18 @@ private fun SettingsNavRow(icon: ImageVector, label: String) {
         Icon(Icons.Default.ChevronRight, null,
             tint = TextHint, modifier = Modifier.size(18.dp))
     }
+}
+@Preview(
+    name = "Dark Mode",
+    showBackground = true,
+    showSystemUi = true
+)
+@Composable
+fun SettingsScreenPreview() {
+    // Create a fake NavController for preview
+    val navController = androidx.navigation.compose.rememberNavController()
+
+    SettingsScreen(
+        navController = navController,
+    )
 }

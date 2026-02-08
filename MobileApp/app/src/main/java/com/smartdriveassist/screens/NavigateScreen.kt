@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -60,7 +61,7 @@ fun NavigateScreen(navController: NavHostController) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(DarkGreen900)
-                    .padding(horizontal = 14.dp, top = 10.dp, bottom = 14.dp)
+                    //.padding(horizontal = 14.dp, top = 10.dp, bottom = 14.dp)
             ) {
                 // Route card
                 Column(
@@ -368,4 +369,15 @@ private fun MapPlaceholder() {
             center = androidx.compose.ui.geometry.Offset(w * 0.38f, h * 0.14f)
         )
     }
+}
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun NavigationScreenPreview() {
+
+    // Create a fake NavController for preview
+    val navController = androidx.navigation.compose.rememberNavController()
+
+    NavigateScreen(
+        navController = navController
+    )
 }

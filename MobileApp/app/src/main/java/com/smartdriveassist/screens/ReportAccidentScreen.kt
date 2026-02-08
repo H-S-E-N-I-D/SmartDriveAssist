@@ -16,11 +16,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.smartdriveassist.navigation.Screen
 import com.smartdriveassist.ui.components.SdaTextField
 import com.smartdriveassist.ui.theme.*
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReportAccidentScreen(onBack: () -> Unit) {
     var location        by remember { mutableStateOf("Galle Rd, Bambalapitiya, Colombo 4") }
@@ -381,4 +384,12 @@ private fun FieldLabel(text: String, required: Boolean) {
             Text(" *", fontSize = 10.sp, fontWeight = FontWeight.SemiBold, color = SevereRed)
         }
     }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun ReportAccidentScreenPreview() {
+    ReportAccidentScreen(
+        onBack = {}
+    )
 }
